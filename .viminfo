@@ -11,17 +11,23 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/INS
+~MSle0~/content
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1716021253,,"q"
-:Q
-|2,0,1716021253,,"Q"
+|2,0,1716107624,,"q"
 :wq
-|2,0,1716019497,,"wq"
+|2,0,1716107119,,"wq"
+:'<,'>
+|2,0,1716106498,,"'<,'>"
 :q!
-|2,0,1716015825,,"q!"
+|2,0,1716105916,,"q!"
+:Q!
+|2,0,1716105882,,"Q!"
+:Q
+|2,0,1716105880,,"Q"
+:7
+|2,0,1716098120,,"7"
 :w
 |2,0,1716015651,,"w"
 :ㅉㅂ
@@ -36,6 +42,20 @@
 |2,0,1716002163,,"wq!"
 
 # Search String History (newest to oldest):
+?/content
+|2,1,1716107189,47,"content"
+?/auth
+|2,1,1716107112,47,"auth"
+?/User
+|2,1,1716107035,47,"User"
+?/MID
+|2,1,1716106376,47,"MID"
+?/ALL
+|2,1,1716105282,47,"ALL"
+?/%
+|2,1,1716099941,47,"%"
+?/model
+|2,1,1716099809,47,"model"
 ?/INS
 |2,1,1716019167,47,"INS"
 ?/ALLOW
@@ -50,268 +70,293 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+"0	LINE	0
+	    '43.202.98.49',
+|3,0,0,1,1,0,1716106321,"    '43.202.98.49',"
 ""1	LINE	0
-	    content = models.TextField(default='')  # 새로운 필드 추가
-|3,1,1,1,1,0,1716019296,"    content = models.TextField(default='')  # 새로운 필드 추가"
+	    #Django에서 제공하는 메서드임
+	    def perform_create(self, serializer): #새로운 객체가 생성될 때 실행되는 메서드
+	        serializer.save(author=self.request.user)
+|3,1,1,1,3,0,1716107117,"    #Django에서 제공하는 메서드임","    def perform_create(self, serializer): #새로운 객체가 생성될 때 실행되는 메서드","        serializer.save(author=self.request.user)"
 "2	LINE	0
-	ALLOWED_HOSTS = []
-|3,0,2,1,1,0,1716018828,"ALLOWED_HOSTS = []"
+	    def perform_create(self, serializer):
+	        serializer.save(author=self.request.user)
+|3,0,2,1,2,0,1716107114,"    def perform_create(self, serializer):","        serializer.save(author=self.request.user)"
 "3	LINE	0
-	"""
-|3,0,3,1,1,0,1716016940,"\"\"\""
+	from django.contrib.auth.models import User
+|3,0,3,1,1,0,1716107036,"from django.contrib.auth.models import User"
 "4	LINE	0
-	    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-|3,0,4,1,1,0,1716016939,"    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))"
+	
+|3,0,4,1,1,0,1716106871,""
 "5	LINE	0
-	    1. Import the include() function: from django.urls import include, path
-|3,0,5,1,1,0,1716016939,"    1. Import the include() function: from django.urls import include, path"
+	    post = serializers.ReadOnlyField(source='post.id')
+|3,0,5,1,1,0,1716106871,"    post = serializers.ReadOnlyField(source='post.id')"
 "6	LINE	0
-	Including another URLconf
-|3,0,6,1,1,0,1716016939,"Including another URLconf"
+	    author = serializers.ReadOnlyField(source='author.username')
+|3,0,6,1,1,0,1716106870,"    author = serializers.ReadOnlyField(source='author.username')"
 "7	LINE	0
-	    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-|3,0,7,1,1,0,1716016938,"    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')"
+	
+|3,0,7,1,1,0,1716106867,""
 "8	LINE	0
-	    1. Add an import:  from other_app.views import Home
-|3,0,8,1,1,0,1716016938,"    1. Add an import:  from other_app.views import Home"
+	    author = serializers.ReadOnlyField(source='author.username')
+|3,0,8,1,1,0,1716106866,"    author = serializers.ReadOnlyField(source='author.username')"
 "9	LINE	0
-	Class-based views
-|3,0,9,1,1,0,1716016938,"Class-based views"
+	    author = models.ForeignKey(User, on_delete=models.CASCADE)
+|3,0,9,1,1,0,1716106717,"    author = models.ForeignKey(User, on_delete=models.CASCADE)"
 "-	CHAR	0
-	.
-|3,0,36,0,1,0,1716018466,"."
+	 
+|3,0,36,0,1,0,1716106792," "
 
 # File marks:
-'0  1  20  ~/bulletin_board/views.py
-|4,48,1,20,1716021253,"~/bulletin_board/views.py"
-'1  9  0  ~/bulletin_board/models.py
-|4,49,9,0,1716019497,"~/bulletin_board/models.py"
-'2  13  0  ~/bulletin_board/models.py
-|4,50,13,0,1716019487,"~/bulletin_board/models.py"
-'3  5  0  ~/bulletin_board/models.py
-|4,51,5,0,1716019487,"~/bulletin_board/models.py"
-'4  1  0  ~/bulletin_board/ls
-|4,52,1,0,1716019448,"~/bulletin_board/ls"
-'5  13  0  ~/bulletin_board/models.py
-|4,53,13,0,1716019297,"~/bulletin_board/models.py"
-'6  5  0  ~/bulletin_board/models.py
-|4,54,5,0,1716019297,"~/bulletin_board/models.py"
-'7  46  0  ~/bulletin_board/settings.py
-|4,55,46,0,1716019272,"~/bulletin_board/settings.py"
-'8  13  66  ~/bulletin_board/models.py
-|4,56,13,66,1716019208,"~/bulletin_board/models.py"
-'9  13  66  ~/bulletin_board/models.py
-|4,57,13,66,1716019208,"~/bulletin_board/models.py"
+'0  5  4  ~/bulletin_board/models.py
+|4,48,5,4,1716107624,"~/bulletin_board/models.py"
+'1  5  4  ~/bulletin_board/models.py
+|4,49,5,4,1716107529,"~/bulletin_board/models.py"
+'2  5  4  ~/bulletin_board/models.py
+|4,50,5,4,1716107197,"~/bulletin_board/models.py"
+'3  5  4  ~/bulletin_board/models.py
+|4,51,5,4,1716107197,"~/bulletin_board/models.py"
+'4  13  0  ~/bulletin_board/views.py
+|4,52,13,0,1716107119,"~/bulletin_board/views.py"
+'5  10  4  ~/bulletin_board/serializers.py
+|4,53,10,4,1716107106,"~/bulletin_board/serializers.py"
+'6  15  43  ~/bulletin_board/views.py
+|4,54,15,43,1716107090,"~/bulletin_board/views.py"
+'7  18  43  ~/bulletin_board/views.py
+|4,55,18,43,1716107090,"~/bulletin_board/views.py"
+'8  2  0  ~/bulletin_board/models.py
+|4,56,2,0,1716107076,"~/bulletin_board/models.py"
+'9  2  0  ~/bulletin_board/models.py
+|4,57,2,0,1716107076,"~/bulletin_board/models.py"
 
 # Jumplist (newest first):
--'  1  20  ~/bulletin_board/views.py
-|4,39,1,20,1716021253,"~/bulletin_board/views.py"
--'  9  0  ~/bulletin_board/models.py
-|4,39,9,0,1716019497,"~/bulletin_board/models.py"
--'  9  0  ~/bulletin_board/models.py
-|4,39,9,0,1716019497,"~/bulletin_board/models.py"
--'  1  0  ~/bulletin_board/models.py
-|4,39,1,0,1716019493,"~/bulletin_board/models.py"
--'  1  0  ~/bulletin_board/models.py
-|4,39,1,0,1716019493,"~/bulletin_board/models.py"
--'  13  0  ~/bulletin_board/models.py
-|4,39,13,0,1716019487,"~/bulletin_board/models.py"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019487,"~/bulletin_board/models.py"
--'  13  0  ~/bulletin_board/models.py
-|4,39,13,0,1716019487,"~/bulletin_board/models.py"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019487,"~/bulletin_board/models.py"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  1  0  ~/bulletin_board/ls
-|4,39,1,0,1716019448,"~/bulletin_board/ls"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019297,"~/bulletin_board/models.py"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019297,"~/bulletin_board/models.py"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019297,"~/bulletin_board/models.py"
--'  5  0  ~/bulletin_board/models.py
-|4,39,5,0,1716019297,"~/bulletin_board/models.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  46  0  ~/bulletin_board/settings.py
-|4,39,46,0,1716019272,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  38  0  ~/bulletin_board/settings.py
-|4,39,38,0,1716019263,"~/bulletin_board/settings.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019208,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
--'  5  66  ~/bulletin_board/models.py
-|4,39,5,66,1716019189,"~/bulletin_board/models.py"
+-'  5  4  ~/bulletin_board/models.py
+|4,39,5,4,1716107624,"~/bulletin_board/models.py"
+-'  5  4  ~/bulletin_board/models.py
+|4,39,5,4,1716107529,"~/bulletin_board/models.py"
+-'  5  4  ~/bulletin_board/models.py
+|4,39,5,4,1716107197,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107189,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107189,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107189,"~/bulletin_board/models.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  13  0  ~/bulletin_board/views.py
+|4,39,13,0,1716107119,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  15  43  ~/bulletin_board/views.py
+|4,39,15,43,1716107112,"~/bulletin_board/views.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  10  4  ~/bulletin_board/serializers.py
+|4,39,10,4,1716107106,"~/bulletin_board/serializers.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  18  43  ~/bulletin_board/views.py
+|4,39,18,43,1716107090,"~/bulletin_board/views.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  2  0  ~/bulletin_board/models.py
+|4,39,2,0,1716107076,"~/bulletin_board/models.py"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
+-'  1  0  ~/bulletin_board/m
+|4,39,1,0,1716107058,"~/bulletin_board/m"
 
 # History of marks within files (newest to oldest):
 
+> ~/bulletin_board/models.py
+	*	1716107602	0
+	"	5	4
+	.	2	0
+	+	25	0
+	+	24	24
+	+	22	0
+	+	9	25
+	+	6	19
+	+	5	19
+	+	6	61
+	+	17	56
+	+	6	55
+	+	1	28
+	+	2	8
+	+	6	0
+	+	13	0
+	+	2	0
+
 > ~/bulletin_board/views.py
-	*	1716021253	0
-	"	1	20
-	^	11	88
-	.	11	85
+	*	1716107118	0
+	"	13	0
+	^	18	67
+	.	13	0
 	+	1	55
 	+	1	39
 	+	1	52
@@ -326,47 +371,89 @@
 	+	1	74
 	+	1	20
 	+	1	0
-	+	20	93
-	+	13	75
-	+	6	38
-	+	8	55
-	+	10	106
-	+	11	85
-
-> ~/bulletin_board/models.py
-	*	1716019496	0
-	"	9	0
-	^	9	0
-	.	8	25
-	+	16	0
-	+	15	24
+	+	1	93
+	+	1	75
+	+	1	38
+	+	1	55
+	+	1	106
+	+	1	85
+	+	1	48
+	+	20	49
 	+	13	0
-	+	8	25
+	+	13	40
+	+	1	35
+	+	14	35
+	+	1	52
+	+	1	0
+	+	14	0
+	+	1	0
+	+	14	0
+	+	1	48
+	+	7	46
+	+	14	0
+	+	13	0
+	+	11	67
+	+	12	0
+	+	19	0
+	+	18	64
+	+	20	0
+	+	13	0
+
+> ~/bulletin_board/serializers.py
+	*	1716107095	0
+	"	10	4
+	^	13	0
+	.	10	0
+	+	13	0
+	+	7	44
+	+	12	35
+	+	5	0
+	+	10	0
+
+> ~/bulletin_board/m
+	*	1716107057	0
+	"	1	0
+
+> ~/bulletin_board/settings.py
+	*	1716106499	0
+	"	54	4
+	^	54	5
+	.	54	4
+	+	47	20
+	+	34	1
+	+	28	0
+	+	31	21
+	+	32	5
+	+	33	11
+	+	54	4
+
+> ~/bulletin_board/se
+	*	1716106316	0
+	"	1	0
+
+> ~/bulletin_board/urls.py
+	*	1716106013	0
+	"	10	11
+	^	12	0
+	.	10	10
+	+	1	13
+	+	1	18
+	+	1	0
+	+	1	37
+	+	11	1
+	+	10	10
+
+> ~/bulletin_board/urlsPY
+	*	1716105882	0
+	"	1	0
+
+> ~/bulletin_board/migrations/0001_initial.py
+	*	1716098237	0
+	"	1	0
 
 > ~/bulletin_board/ls
 	*	1716019447	0
 	"	1	0
-
-> ~/bulletin_board/settings.py
-	*	1716019270	0
-	"	46	0
-	^	31	21
-	.	31	20
-	+	45	20
-	+	32	1
-	+	28	0
-	+	31	20
-
-> ~/bulletin_board/urls.py
-	*	1716019032	0
-	"	6	21
-	^	6	22
-	.	6	21
-	+	6	13
-	+	3	18
-	+	6	0
-	+	1	0
-	+	6	21
 
 > ~/bulletin_board/v
 	*	1716015892	0
@@ -437,24 +524,3 @@
 	^	11	0
 	.	10	1
 	+	10	1
-
-> ~/myproject/urls.py
-	*	1715999765	0
-	"	8	0
-	^	8	0
-	.	7	1
-	+	7	1
-
-> ~/myproject/myapp/serializers.py
-	*	1715999722	0
-	"	8	0
-	^	8	0
-	.	7	26
-	+	7	26
-
-> ~/myproject/myapp/models.py
-	*	1715999711	0
-	"	10	0
-	^	10	0
-	.	9	25
-	+	9	25
