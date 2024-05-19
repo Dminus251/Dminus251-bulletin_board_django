@@ -567,3 +567,168 @@ clear
 vi urls.py 
 clear
 vi urls.py 
+sqlite3 db.sqlite3 
+clear
+ls
+cd bulletin_board/
+ls
+vi views.py 
+vi se
+cd ../
+vi bulletin_board/settings.py 
+vi bulletin_board/urls.py 
+clear
+python3 manage.py runserver
+vi bulletin_board/urls.py 
+clear
+source myvenv/bin/activate
+python3 manage.py runserver
+pip install djangorestframework
+python3 manage.py runserver
+clear
+vi bulletin_board/views.py 
+python3 manage.py runserver
+vi bulletin_board/views.py 
+python3 manage.py runserver
+clear
+python3 manage.py runserver
+clear
+ls
+cd bulletin_board/
+ls
+vi urlsPY
+vi urls.py 
+vi views.py 
+vi urls.py 
+vi views.py 
+vi urls.py 
+pip install --upgrade djangorestframework
+clear
+cd ../
+python3 manage.py runserver
+vi bulletin_board/urls.py 
+vi bulletin_board/views.py 
+python3 manage.py runserver
+vi bulletin_board/views.py 
+python3 manage.py runserver
+vi bulletin_board/views.py 
+clear
+vi bulletin_board/views.py 
+python3 manage.py runserver
+vi bulletin_board/se
+vi bulletin_board/settings.py 
+python3 manage.py runserver
+vi bulletin_board/settings.py 
+vi bulletin_board/views.py 
+python3 manage.py runserver
+clear
+ls
+vi bulletin_board/views.py 
+cd bulletin_board/
+vi models.py 
+cd ../
+python3 manage.py runserver
+ls
+vi bulletin_board/views.py 
+vi bulletin_board/serializers.py 
+ls
+python3 manage.py runserver
+vi bulletin_board/serializers.py 
+ls
+cd bulletin_board/
+cd ../
+python3 manage.py migrations
+python3 manage.py migrate
+ls
+cd bulletin_board/
+claer
+ls
+cd migrations/
+ls
+rm 0001_initial.py 
+rm -rf __pycache__/
+cd ../
+ls
+cd ../
+python3 manage.py makemigrations
+python3 manage.py migrate
+python manage.py showmigrations
+python3 manage.py runserver
+clear
+ls
+cd bulletin_board/
+vi models.py 
+vi m
+vi models.py 
+vi views.py 
+vi serializers.py 
+vi views.py 
+cd ../
+python3 manage.py runserver
+clear
+ls
+cd bulletin_board/
+ls
+vi models.py 
+cd migrations/
+clear
+ls
+rm 0001_initial.py 
+rm -rf __pycache__/
+cd ../../
+python manage.py makemigrations
+python manage.py migrate
+python3 manage.py runserver
+clear
+python manage.py dbshell
+rm -rf bulletin_board/migrations
+cd bulletin_board/
+mkdir migrations
+cd migrations/
+touch __init__.py
+cd ../
+clear
+ls
+cd ../
+python3 manage.py makemigrations
+python3 manage.py migrate
+python manage.py dbshell
+clear
+cd bulletin_board/
+vi models.py 
+cd ../
+python3 manage.py showmigrations
+python manage.py dbshell
+clear
+vi bulletin_board/models.py 
+clear
+rm -rf bulletin_board/migrations
+python manage.py migrate --fake bulletin_board zero
+python manage.py makemigrations
+mkdir bulletin_board/migrations
+touch bulletin_board/migrations/__init__.py
+python manage.py makemigrations
+python manage.py migrate
+cat bulletin_board/models.py 
+python manage.py dbshell
+clear
+rm db.sqlite3
+rm -rf bulletin_board/migrations
+mkdir bulletin_board/migrations
+touch bulletin_board/migrations/__init__.py
+python manage.py makemigrations
+python manage.py migrate
+ls
+clear
+python manage.py dbshell
+clear
+LS
+ls
+python3 manage.py runserver
+clear
+git branch
+git remote
+git add .
+git commit -m "post 구현"
+git push origin main
+git push origin main --force
